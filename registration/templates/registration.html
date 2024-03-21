@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #2980b9, #3498db);
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #registrationContainer {
+            max-width: 400px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+
+        #registrationContainer h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-check-input {
+            margin-right: 10px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+        }
+
+        p.text-center {
+            margin-top: 20px;
+        }
+
+        p.text-center a {
+            color: #fff;
+        }
+
+        p.text-center a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="registrationContainer">
+        <h2>Registration</h2>
+        <form action="" method="post" id="registrationForm">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label>User Type:</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="user_type" id="teacherRadio" value="teacher" required>
+                    <label class="form-check-label" for="teacherRadio">Teacher</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="user_type" id="studentRadio" value="student" required>
+                    <label class="form-check-label" for="studentRadio">Student</label>
+                </div>
+            </div>
+            <div class="form-group" id="rollnoDiv" style="display: none;">
+                <label for="rollno">Roll No:</label>
+                <input type="text" class="form-control" id="rollno" name="rollno">
+            </div>
+            <div class="form-group" id="teacherIDDiv" style="display: none;">
+                <label for="teacher_id">Teacher ID:</label>
+                <input type="text" class="form-control" id="teacher_id" name="teacher_id">
+            </div>
+            <div class="form-group" id="branchDiv" style="display: none;">
+                <label for="branch">Branch:</label>
+                <input type="text" class="form-control" id="branch" name="branch">
+            </div>
+            <div class="form-group" id="yearDiv" style="display: none;">
+                <label for="year">Year:</label>
+                <input type="text" class="form-control" id="year" name="year">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+        <p class="text-center">Already have an account? <a href="/">Login here</a></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var userTypeRadios = document.querySelectorAll('input[name="user_type"]');
+            var rollnoDiv = document.getElementById('rollnoDiv');
+            var teacherIDDiv = document.getElementById('teacherIDDiv');
+            var branchDiv = document.getElementById('branchDiv');
+            var yearDiv = document.getElementById('yearDiv');
+
+            userTypeRadios.forEach(function(radio) {
+                radio.addEventListener('change', function() {
+                    if (this.value === 'student') {
+                        rollnoDiv.style.display = 'block';
+                        teacherIDDiv.style.display = 'none';
+                        branchDiv.style.display = 'block';
+                        yearDiv.style.display = 'block';
+                    } else if (this.value === 'teacher') {
+                        rollnoDiv.style.display = 'none';
+                        teacherIDDiv.style.display = 'block';
+                        branchDiv.style.display = 'none';
+                        yearDiv.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

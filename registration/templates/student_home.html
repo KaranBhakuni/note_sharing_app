@@ -1,0 +1,266 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #2980b9, #3498db);
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #studentHomeContainer {
+            max-width: 800px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .form-row input[type="text"] {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        p.text-center {
+            margin-top: 20px;
+        }
+
+        p.text-center a {
+            color: #fff;
+        }
+
+        p.text-center a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="studentHomeContainer">
+        <h2>HI, Student Name</h2>
+        <div class="form-row">
+            <input type="text" class="form-control" id="noteName" placeholder="Note Name">
+            <button class="btn">Download</button>
+        </div>
+        <div class="form-row">
+            <input type="text" class="form-control" id="noteName" placeholder="Note Name">
+            <button class="btn">Download</button>
+        </div>
+        Add more form rows as needed -->
+
+        <!-- <p class="text-center">Not what you're looking for? <a href="/">Logout</a></p>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Notes - Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #2980b9, #3498db);
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .form-row input[type="text"] {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .note-list {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .note-list th,
+        .note-list td {
+            padding: 8px 16px;
+            
+        }
+
+        .note-list th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .note-list td {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .text-center {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .text-center a {
+            color: #fff;
+        }
+
+        .text-center a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Academic Notes</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Your Profile</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h2>Hi, Karan!</h2>
+        <div class="form-row">
+            <input type="text" class="form-control" id="searchNote" placeholder="Search Note">
+            <button class="btn">Search</button>
+        </div>
+        <table class="note-list">
+            <tr>
+                <th>Files</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>file1</td>
+                <td><button class="btn">Download</button></td>
+            </tr>
+            <tr>
+                <td>file2</td>
+                <td><button class="btn">Download</button></td>
+            </tr>
+            <tr>
+                <td>file3</td>
+                <td><button class="btn">Download</button></td>
+            </tr>
+            <tr>
+                <td>file4</td>
+                <td><button class="btn">Download</button></td>
+            </tr>
+            <tr>
+                <td>file5</td>
+                <td><button class="btn">Download</button></td>
+            </tr>
+            <tr>
+                <td>file6</td>
+                <td><button class="btn">Download</button></td>
+            </tr>
+            <tr>
+                <td>file7</td>
+                <td><button class="btn">Download</button></td>
+            </tr>
+            <tr>
+                <td>file8</td>
+                <td><button class="btn">Download</button></td>
+            </tr>
+            <tr>
+                <td>file9</td>
+                <td><button class="btn">Download</button></td>
+            </tr>
+        </table>
+        <p class="text-center">Not what you're looking for? <a href="#">Logout</a></p>
+    </div>
+</body>
+</html>
+
+
+
+
+
